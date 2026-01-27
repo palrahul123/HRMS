@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Core.Application.Interfaces;
+using Infrastructure.Persistence.Interfaces;
+using Infrastructure.Persistence.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Infrastructure.Persistence.Data
+namespace Infrastructure.Persistence.Extensions
 {
     public static class ServiceCollectionExtensio
     {
@@ -20,6 +23,9 @@ namespace Infrastructure.Persistence.Data
                             errorNumbersToAdd: null);
                     });
             });
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }

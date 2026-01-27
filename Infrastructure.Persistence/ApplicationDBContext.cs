@@ -24,7 +24,6 @@ namespace Infrastructure.Persistence
         public DbSet<Role> roles { get; set; }
         public DbSet<UserRole> userRoles { get; set; }
         public DbSet<EmployeeBankAccount> employeeBankAccounts { get; set; }
-        public DbSet<Employee> employees { get; set; }
         public DbSet<DocumentUpload> documentUploads { get; set; }
 
     }

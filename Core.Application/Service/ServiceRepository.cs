@@ -3,13 +3,13 @@ using Core.Application.Interfaces;
 
 namespace Core.Application.Service
 {
-    public class Service<T, Tdto> : IService<Tdto> where T : class, new() where Tdto : class, new()
+    public class ServiceRepository<T, Tdto> : IServiceRepository<Tdto> where T : class, new() where Tdto : class, new()
     {
         private readonly IRepository<T> _repository;
         private readonly Func<T, Tdto> _entityToDto;
         private readonly Func<Tdto, T> _dtoToEntity;
 
-        public Service(IRepository<T> repository, Func<T, Tdto> entityToDto, Func<Tdto, T> dtoToEntity)
+        public ServiceRepository(IRepository<T> repository, Func<T, Tdto> entityToDto, Func<Tdto, T> dtoToEntity)
         {
             _repository = repository;
             _entityToDto = entityToDto;

@@ -1,6 +1,6 @@
 ﻿namespace Core.Application.Interface
 {
-    public interface IService<T> where T : class
+    public interface IServiceRepository<T> where T : class
     {
         Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();

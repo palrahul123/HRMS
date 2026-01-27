@@ -1,11 +1,11 @@
-
-
-using Infrastructure.Persistence.Data;
+using Core.Application;
+using Infrastructure.Persistence.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddPersistenceData(builder.Configuration);
 
 var app = builder.Build();
