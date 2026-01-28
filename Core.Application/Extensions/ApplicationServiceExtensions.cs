@@ -1,7 +1,5 @@
 ﻿using Core.Application.Common;
-using Core.Application.Interface;
 using Core.Application.Service;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Core.Application
@@ -12,7 +10,7 @@ namespace Core.Application
         {
 
             services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped(typeof(IServiceRepository<>), typeof(ServiceRepository<,>));
+            services.AddScoped(typeof(IService<>), typeof(Service<,>));
             services.Configure<JwtSettings>(action =>
             {
                 action.Issuer = configuration["JwtSettings:Issuer"];

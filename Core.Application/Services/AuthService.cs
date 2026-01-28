@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Core.Application.DTOs;
-using Core.Application.Interface;
+using Core.Application.DTOs.UserProfile;
+using Core.Application.Interface.Repositories;
+using Core.Application.Interface.Services;
 using Core.Domain;
-using Infrastructure.Persistence.Interfaces;
 
 namespace Core.Application.Service
 {

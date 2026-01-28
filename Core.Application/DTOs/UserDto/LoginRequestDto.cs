@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Core.Application.DTOs
+namespace Core.Application.DTOs.UserProfile
 {
     public class LoginRequestDto
     {

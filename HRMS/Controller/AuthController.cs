@@ -1,5 +1,4 @@
-﻿using Core.Application.DTOs;
-using Core.Application.Interface;
+﻿using Core.Application.DTOs.UserProfile;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HRMS.Controller
