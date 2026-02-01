@@ -1,7 +1,4 @@
-﻿using Core.Application.Interfaces;
-using Infrastructure.Persistence.Interfaces;
-using Infrastructure.Persistence.Services;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,8 +21,8 @@ namespace Infrastructure.Persistence.Extensions
                     });
             });
 
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped<IUserRepository, UserRepository>();
+            //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            //services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }

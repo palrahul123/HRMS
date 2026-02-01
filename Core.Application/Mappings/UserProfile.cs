@@ -35,7 +35,7 @@ namespace Core.Application.Mappings
                .ForMember(dest => dest.BranchId, opt => opt.MapFrom(src => src.BranchId ?? 0))
                .ForMember(dest => dest.BranchName, opt => opt.MapFrom(src => src.Branch != null ? src.Branch.BranchName : string.Empty))
                .ForMember(dest => dest.RoleId, opt => opt.MapFrom(src => src.RoleId))
-               .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.userRoles != null && src.userRoles.Any() ? src.userRoles.FirstOrDefault().Role.Name : string.Empty))
+               .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.userRoles != null && src.userRoles.Any() ? src.userRoles.FirstOrDefault().Role.RoleName : string.Empty))
                .ForMember(dest => dest.Token, opt => opt.Ignore())
                .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.FirstName))
                .ForMember(dest => dest.LastName, opt => opt.MapFrom(src => src.LastName))

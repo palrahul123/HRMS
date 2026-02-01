@@ -16,7 +16,7 @@ namespace HRMS.Controller
             _userService = userService;
         }
 
-
+        // GET: api/users
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -24,7 +24,7 @@ namespace HRMS.Controller
             return Ok(new APIResponse(true, "Users retrieved successfully", users));
         }
 
-
+        // GET: api/users/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -35,7 +35,7 @@ namespace HRMS.Controller
             return Ok(new APIResponse(true, "User retrieved successfully", user));
         }
 
-
+        // POST: api/users
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
         {
@@ -46,7 +46,7 @@ namespace HRMS.Controller
             return Ok(new APIResponse(true, "User created successfully"));
         }
 
-
+        // PUT: api/users/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateUserDto dto)
         {
@@ -57,7 +57,7 @@ namespace HRMS.Controller
             return Ok(new APIResponse(true, "User updated successfully"));
         }
 
-
+        // DELETE: api/users/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
