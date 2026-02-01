@@ -16,15 +16,15 @@ namespace Infrastructure.Persistence
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Company> companies { get; set; }
-        public DbSet<Department> departments { get; set; }
-        public DbSet<Designation> designations { get; set; }
-        public DbSet<User> users { get; set; }
-        public DbSet<Branch> branches { get; set; }
-        public DbSet<Role> roles { get; set; }
-        public DbSet<UserRole> userRoles { get; set; }
-        public DbSet<EmployeeBankAccount> employeeBankAccounts { get; set; }
-        public DbSet<DocumentUpload> documentUploads { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Designation> Designations { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Branch> Branches { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<EmployeeBankAccount> EmployeeBankAccounts { get; set; }
+        public DbSet<DocumentUpload> DocumentUploads { get; set; }
 
     }
 }
